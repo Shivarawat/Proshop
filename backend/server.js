@@ -18,11 +18,15 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 app.use(express.json());
+const productRouter = express.Router()
+const userRouter = express.Router();
+const orderRouter = express.Router();
+const uploadRouter = express.Router();
 
-app.use('/api/products', productRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/orders', orderRoutes);
-app.use('/api/uploads', uploadRoutes);
+productRouter.use('/api/products', productRoutes);
+userRouter.use('/api/users', userRoutes);
+orderRouter.use('/api/orders', orderRoutes);
+uploadRouter.use('/api/uploads', uploadRoutes);
 
 // __dirname is available in commonJS but not in es6, that's why setting up like this
 const __dirname = path.resolve();
