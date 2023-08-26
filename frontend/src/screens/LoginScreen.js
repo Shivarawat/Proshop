@@ -30,7 +30,6 @@ const LoginScreen = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(login({ email, password }));
-    console.log(userInfo)
   };
   return (
     <FormContainer>

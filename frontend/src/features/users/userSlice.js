@@ -174,7 +174,7 @@ const userSlice = createSlice({
       .addCase(login.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload.message;
-        console.log(state.error);
+        // console.log(state.error);
       })
       .addCase(logout.fulfilled, (state, action) => {
         state.userInfo = null;
@@ -185,18 +185,18 @@ const userSlice = createSlice({
         state.userInfo = action.payload;
       })
       .addCase(updateUserProfile.rejected, (state, action) => {
-        console.log('TASK FAILED');
+        // console.log('TASK FAILED');
       })
       .addCase(getUserDetails.pending, (state, action) => {
         state.loading = true;
       })
       .addCase(getUserDetails.fulfilled, (state, action) => {
-        console.log('GET USER DETAILS SUCCESS', action.payload);
+        // console.log('GET USER DETAILS SUCCESS', action.payload);
         state.loading = false;
         state.targetUserInfo = action.payload;
       })
       .addCase(getUserDetails.rejected, (state, action) => {
-        console.log('GET USER DETAILS SUCCESS', action.payload);
+        // console.log('GET USER DETAILS SUCCESS', action.payload);
         state.loading = false;
         state.error = action.payload;
       })

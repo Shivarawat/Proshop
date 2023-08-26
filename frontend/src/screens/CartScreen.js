@@ -68,7 +68,7 @@ const CartScreen = () => {
                         as={'select'}
                         value={item.qty}
                         onChange={(e) =>
-                          {console.log(';lajf;sdkjf;lasj', item)
+                          {
                             dispatch(
                             addToCart({
                               id: item.product,

@@ -50,7 +50,6 @@ const PlaceOrderScreen = () => {
         })
       );
     } catch (err) {
-      console.log('Error PLACE ORDER HANDLER');
     }
   };
   let content;

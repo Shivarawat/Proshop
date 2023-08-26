@@ -16,7 +16,6 @@ const ShippingScreen = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { shippingAddress } = useSelector((state) => state.cart);
-  console.log('SHIPPING ADDRESS', shippingAddress);
 
   const [address, setAddress] = useState(shippingAddress.address);
   const [city, setCity] = useState(shippingAddress.city);

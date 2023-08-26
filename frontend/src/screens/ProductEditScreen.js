@@ -81,9 +81,7 @@ const uploadFileHandler = async (e) => {
     };
     const { data } = await axios.post('/api/uploads', formData, config);
     setImage(data);
-    console.log('Upload successful:', data);
   } catch (error) {
-    console.error('Upload failed:', error.message || error.response?.data);
   } finally {
     setUploading(false);
   }

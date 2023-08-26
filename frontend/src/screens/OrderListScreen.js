@@ -18,7 +18,6 @@ const OrderListScreen = () => {
   useEffect(() => {
     if (userInfo && userInfo.isAdmin) dispatch(listAllOrders());
     else navigate('/');
-    console.log('orderlistscreen', allOrders);
   }, [dispatch, userInfo]);
 
   const deleteHandler = (id) => {

@@ -16,7 +16,7 @@ const getProducts = asyncHandler(async (req, res) => {
         },
       }
     : {};
-  console.log(keyword, pageNumber);
+  // console.log(keyword, pageNumber);
   const count = await Product.countDocuments({ ...keyword }); // Use countDocuments instead of count
   const products = await Product.find({ ...keyword })
     .limit(pageSize)
@@ -67,7 +67,7 @@ const createProduct = asyncHandler(async (req, res) => {
 const updateProduct = asyncHandler(async (req, res) => {
   const { name, price, description, image, brand, category, countInStock } =
     req.body;
-  console.log(req.body);
+  // console.log(req.body);
 
   const product = await Product.findById(req.params.id);
 

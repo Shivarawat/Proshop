@@ -113,7 +113,7 @@ export const updateProduct = createAsyncThunk(
   'products/updateProduct',
   async (product, thunkAPI) => {
     try {
-      console.log('update product', product);
+      // console.log('update product', product);
       const userInfo = thunkAPI.getState().user.userInfo;
       const config = {
         headers: {
@@ -161,7 +161,7 @@ const productSlice = createSlice({
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = 'success';
-        console.log(action.payload);
+        // console.log(action.payload);
         state.products = action.payload.products;
         state.pages = action.payload.pages;
         state.page = action.payload.page;

@@ -40,7 +40,6 @@ const OrderScreen = () => {
   const [sdkReady, setSdkReady] = useState(false);
 
   const successPaymentHandler = (paymentResult) => {
-    console.log('PAYMENT RESULT', paymentResult);
     dispatch(payOrder({ id, paymentResult }));
   };
 
@@ -62,7 +61,6 @@ const OrderScreen = () => {
     };
 
     if (!order || successPay || successDeliver) {
-      console.log('abe tu chal raha hai kya');
       dispatch(payReset());
       dispatch(getOrderDetails(id));
     } else if (!order.isPaid) {
@@ -77,7 +75,6 @@ const OrderScreen = () => {
     <Message type='danger'>Error</Message>
   ) : (
     <>
-      {console.log(userInfo.isAdmin, order.isPaid, !order.isDelivered)}
       <h1>Order {order._id}</h1>
       <Row>
         <Col md={8}>

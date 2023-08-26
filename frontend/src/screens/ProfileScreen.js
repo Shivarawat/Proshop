@@ -43,9 +43,7 @@ const ProfileScreen = () => {
       setName(userInfo.name);
       setEmail(userInfo.email);
     }
-    console.log('calling listMyOrders');
     dispatch(listMyOrders());
-    console.log(myOrders);
   }, [userInfo]);
 
   const submitHandler = async (e) => {

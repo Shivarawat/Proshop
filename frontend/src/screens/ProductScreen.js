@@ -202,7 +202,6 @@ const ProductScreen = () => {
       </>
     );
   }
-  console.log('Product Reviews hai', product);
   return <>{content}</>;
 };
 

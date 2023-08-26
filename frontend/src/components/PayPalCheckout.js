@@ -26,11 +26,11 @@ const PayPalCheckout = () => {
         onApprove: async (data, actions) => {
           const order = await actions.order.capture();
 
-          console.log('success', order);
+          // console.log('success', order);
           setTransactionStatus('success');
         },
         onError: (err) => {
-          console.log(err);
+          // console.log(err);
           setTransactionStatus('failure');
         },
       })

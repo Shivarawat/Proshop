@@ -78,7 +78,7 @@ const getUsers = asyncHandler(async (req, res) => {
 // @access  Private/Admin
 const deleteUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id);
-  console.log('Requested Params', req.params.id);
+  // console.log('Requested Params', req.params.id);
   if (user) {
     await user.remove();
     res.json({ message: 'User was removed' });
