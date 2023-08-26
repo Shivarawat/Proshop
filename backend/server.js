@@ -33,7 +33,7 @@ if (process.env.NODE_ENV === 'production') {
 
   app.use(
     cors({
-      origin: 'https://proshop-ecomm-i6le.onrender.com/',
+      origin: '*',
     })
   );
 
@@ -56,6 +56,6 @@ app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
 
 app.listen(
-  PORT,
+  PORT
   // console.log(`Server is running in ${process.env.NODE_ENV} on port: ${PORT}`)
 );
